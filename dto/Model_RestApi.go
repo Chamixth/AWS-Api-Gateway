@@ -5,6 +5,7 @@ import "github.com/aws/aws-sdk-go/service/apigateway"
 type RestApi struct {
 	Name        string `json:"name"`
 	Description string `json:"description"`
+	EndPointConfiguration apigateway.EndpointConfiguration `json:"endPointConfiguration"`
 	Region      string `json:"region"`
 }
 

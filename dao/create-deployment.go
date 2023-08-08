@@ -17,6 +17,7 @@ func CreateDeployment(application dto.Deployment) (*apigateway.Deployment, error
 
 	result, err := client.CreateDeployment(&apigateway.CreateDeploymentInput{
 		RestApiId: aws.String(application.RestApiId),
+		StageName: &application.StageName,
 	})
 
 	if err !=nil{

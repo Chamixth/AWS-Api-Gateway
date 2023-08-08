@@ -19,6 +19,7 @@ func CreateRestApi(application dto.RestApi) (*string, error) {
 	input, err := client.CreateRestApi(&apigateway.CreateRestApiInput{
 		Name: aws.String(application.Name),
 		Description: aws.String(application.Description),
+		EndpointConfiguration: &application.EndPointConfiguration,
 	})
 
 	if err != nil {

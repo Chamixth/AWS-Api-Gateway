@@ -6,3 +6,4 @@ type Stage struct{
 	StageName string `json:"stageName"`
 	Region string `json:"region"` 
 }
+

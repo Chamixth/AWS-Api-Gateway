@@ -22,6 +22,12 @@ func main() {
 	app.Put("/putMethod",api.PutMethod)
 	app.Put("putIntegration",api.PutIntegration)
 	app.Post("/createDeployment",api.CreateDeployment)
+	app.Post("/createStage",api.CreateStage)
+	app.Put("/putMethodResponse",api.PutMethodResponse)
+	app.Get("/getMethod",api.GetMethod)
+	app.Put("/putIntegrationResponse",api.PutIntegrationResponse)
+	app.Get("/getStage",api.GetStage)
+	app.Get("/getIntegration",api.GetIntegration)
 	if err := app.Listen(":8080"); err != nil {
 		log.Fatalf("failed to run server: %v", err)
 	}

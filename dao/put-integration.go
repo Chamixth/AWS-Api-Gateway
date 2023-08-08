@@ -20,7 +20,9 @@ func PutIntegration(application dto.Integration)(*apigateway.Integration,error){
 		RestApiId: application.RestApiId,
 		Type: application.Type,
 		IntegrationHttpMethod: &application.IntegrationType,
+		ContentHandling: application.ContentHandling,
 		Uri: application.Uri,
+		
 		
 	})
 

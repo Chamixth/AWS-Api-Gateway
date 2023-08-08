@@ -19,7 +19,7 @@ func PutMethod(application dto.Method) (*apigateway.Method,error) {
 		ResourceId: aws.String(application.ResourceId),
 		RestApiId: aws.String(application.RestApiId),
 		AuthorizationType: aws.String(application.AuthorizationType),
-		
+		RequestParameters:application.RequestParameters ,
 	})
 
 	if err != nil{
