@@ -8,24 +8,22 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
-func DeleteMethod(c *fiber.Ctx) error {
+func DeleteIntegration(c *fiber.Ctx) error {
 	var region dto.Region
-
-	restApiId := c.Query("restApiId")
-	resourceId := c.Query("resourceId")
-	httpMethod := c.Query("httpMethod")
-
 	if err := c.BodyParser(&region); err != nil {
 		return err
 	}
+	restApiId := c.Query("restApiId")
+	httpMethod := c.Query("httpMethod")
+	resourceId := c.Query("resourceId")
 
-	err := dao.DeleteMethod(httpMethod, resourceId, restApiId, region.Region)
+	err := dao.DeleteIntegration(httpMethod, resourceId, restApiId, region.Region)
 
 	if err != nil {
 		return err
 	}
 
 	return c.Status(http.StatusOK).JSON(fiber.Map{
-		"Method":"Deleted Successfully",
+		"Integration": "Delete Successfully",
 	})
 }

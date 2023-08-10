@@ -29,6 +29,14 @@ func main() {
 	app.Get("/getStage",api.GetStage)
 	app.Get("/getIntegration",api.GetIntegration)
 	app.Get("/getMethodRequestArn",api.GetMethodRequestArn)
+	app.Delete("/deleteMethod",api.DeleteMethod)
+	app.Delete("/deleteStage",api.DeleteStage)
+	app.Delete("/deleteIntegration",api.DeleteIntegration)
+	app.Get("/getResources",api.GetResources)
+	app.Get("/getRestApis",api.GetRestApis)
+	app.Get("/getMethodResponse",api.GetMethodResponse)
+	app.Get("/getIntegrationResponse",api.GetIntegrationResponse)
+	app.Get("/getDeployment",api.GetDeployment)
 	if err := app.Listen(":8080"); err != nil {
 		log.Fatalf("failed to run server: %v", err)
 	}
