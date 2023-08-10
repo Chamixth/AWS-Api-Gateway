@@ -21,6 +21,7 @@ func GetStage(restApiId, stageName,region string) (*apigateway.Stage,error){
 	if err != nil{
 		return nil,err
 	}
+	
 
 	return result,nil
 }

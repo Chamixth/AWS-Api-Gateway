@@ -15,6 +15,7 @@ func PutIntegration(application dto.Integration)(*apigateway.Integration,error){
 	} 
 
 	result, err := client.PutIntegration(&apigateway.PutIntegrationInput{
+		CacheKeyParameters: application.CacheKeyParameters,
 		HttpMethod: application.HttpMethod,
 		ResourceId: application.ResourceId,
 		RestApiId: application.RestApiId,
@@ -22,6 +23,7 @@ func PutIntegration(application dto.Integration)(*apigateway.Integration,error){
 		IntegrationHttpMethod: &application.IntegrationType,
 		ContentHandling: application.ContentHandling,
 		Uri: application.Uri,
+		RequestParameters: application.RequestParameters,
 		
 		
 	})

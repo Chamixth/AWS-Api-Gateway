@@ -28,6 +28,7 @@ func main() {
 	app.Put("/putIntegrationResponse",api.PutIntegrationResponse)
 	app.Get("/getStage",api.GetStage)
 	app.Get("/getIntegration",api.GetIntegration)
+	app.Get("/getMethodRequestArn",api.GetMethodRequestArn)
 	if err := app.Listen(":8080"); err != nil {
 		log.Fatalf("failed to run server: %v", err)
 	}
