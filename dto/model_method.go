@@ -8,8 +8,8 @@ type Method struct {
 	RestApiId             string           `json:"restApiId"`
 	AuthorizationType     string           `json:"authorizationType"`
 	RequestParameters     map[string]*bool `json:"requestParameters"`
-	
-	Region                string `json:"region"`
+AuthorizerId 			  string           `json:"authorizerId"`
+	Region                string           `json:"region"`
 }
 
 type MethodResponse struct {

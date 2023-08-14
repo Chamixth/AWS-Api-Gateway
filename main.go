@@ -37,6 +37,10 @@ func main() {
 	app.Get("/getMethodResponse",api.GetMethodResponse)
 	app.Get("/getIntegrationResponse",api.GetIntegrationResponse)
 	app.Get("/getDeployment",api.GetDeployment)
+	app.Get("/getAuthorizer",api.GetAuthorizer)
+	app.Post("/createAuthorizer",api.CreateAuthorizer)
+	app.Delete("/deleteAuthorizer",api.DeleteAuthorizer)
+	app.Get("/getAuthorizers",api.GetAuthorizers)
 	if err := app.Listen(":8080"); err != nil {
 		log.Fatalf("failed to run server: %v", err)
 	}
