@@ -41,6 +41,9 @@ func main() {
 	app.Post("/createAuthorizer",api.CreateAuthorizer)
 	app.Delete("/deleteAuthorizer",api.DeleteAuthorizer)
 	app.Get("/getAuthorizers",api.GetAuthorizers)
+	app.Get("/getDocumentationParts",api.GetDocumentationParts)
+	app.Post("/createDocumentationPart",api.CreateDocumentationPart)
+	app.Post("/getExport",api.GetExport)
 	if err := app.Listen(":8080"); err != nil {
 		log.Fatalf("failed to run server: %v", err)
 	}
