@@ -44,6 +44,9 @@ func main() {
 	app.Get("/getDocumentationParts",api.GetDocumentationParts)
 	app.Post("/createDocumentationPart",api.CreateDocumentationPart)
 	app.Post("/getExport",api.GetExport)
+	app.Post("/createModel",api.CreateModelApi)
+	app.Get("/getModel",api.GetModel)
+	app.Get("/getModels",api.GetModels)
 	if err := app.Listen(":8080"); err != nil {
 		log.Fatalf("failed to run server: %v", err)
 	}
